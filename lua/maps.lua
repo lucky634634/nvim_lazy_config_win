@@ -30,3 +30,13 @@ keymap.set("n", "<C-Down>", "<C-w>-", { silent = true })
 keymap.set("n", "<leader>t", "<CMD>tabnew<CR>", { silent = true })
 keymap.set("n", "H", "<CMD>tabprevious<CR>", { silent = true })
 keymap.set("n", "L", "<CMD>tabnext<CR>", { silent = true })
+
+-- Format
+keymap.set({ "n", "v" }, "<leader>F", function()
+	local conform = require("conform")
+	conform.format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 1000,
+	})
+end)
