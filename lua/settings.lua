@@ -5,6 +5,7 @@ global.mapleader = ' '
 global.maplocalleader = ' '
 
 o.number = true
+o.relativenumber = true
 o.clipboard:append("unnamedplus")
 o.syntax = "on"
 o.autoindent = true
