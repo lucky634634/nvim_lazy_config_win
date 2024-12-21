@@ -1,5 +1,7 @@
 local keymap = vim.keymap
 
+keymap.set({ "n", "v" }, "<leader>d", '"_', { silent = true })
+
 keymap.set("n", "<leader>e", "<CMD>Neotree toggle<CR>", { desc = "Neotree toggle" })
 keymap.set("n", "<leader>r", "<CMD>Neotree focus<CR>", { desc = "Neotree focus" })
 
