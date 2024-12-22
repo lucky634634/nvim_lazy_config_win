@@ -1,8 +1,8 @@
 local global = vim.g
 local o = vim.opt
 
-global.mapleader = ' '
-global.maplocalleader = ' '
+global.mapleader = " "
+global.maplocalleader = " "
 
 o.number = true
 o.relativenumber = true
@@ -16,14 +16,14 @@ o.softtabstop = 4
 o.shiftwidth = 4
 o.wrap = true
 o.linebreak = true
-o.showbreak = '↪ '
+o.showbreak = "↪ "
 o.breakindent = true
-o.breakindentopt = 'shift:2,min:20'
+o.breakindentopt = "shift:2,min:20"
 o.hidden = true
 o.backup = false
 o.writebackup = false
 o.updatetime = 300
-o.signcolumn = 'yes'
+o.signcolumn = "yes"
 o.title = true
 o.showcmd = true
 o.wildmenu = true
@@ -34,3 +34,5 @@ o.splitbelow = true
 o.termguicolors = true
 o.ruler = true
 o.mouse = "a"
+
+o.shell = "pwsh.exe"
