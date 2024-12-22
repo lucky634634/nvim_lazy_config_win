@@ -35,10 +35,13 @@ keymap.set("n", "L", "<CMD>tabnext<CR>", { silent = true })
 
 -- Format
 keymap.set({ "n", "v" }, "<leader>F", function()
-	local conform = require("conform")
-	conform.format({
-		lsp_fallback = true,
-		async = false,
-		timeout_ms = 1000,
-	})
+    local conform = require("conform")
+    conform.format({
+        lsp_fallback = true,
+        async = false,
+        timeout_ms = 1000,
+    })
 end)
+
+-- Terminal
+keymap.set("t", "<esc>", "<C-\\><C-n>", { silent = true })
