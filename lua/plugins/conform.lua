@@ -1,8 +1,8 @@
 return {
-    'stevearc/conform.nvim',
+    "stevearc/conform.nvim",
     opts = {},
     config = function()
-        local conform = require('conform')
+        local conform = require("conform")
         conform.setup({
             formatters_by_ft = {
                 lua = { "stylua" },
@@ -13,5 +13,12 @@ return {
                 timeout_ms = 1000,
             },
         })
+        function _G.Format()
+            conform.format({
+                lsp_fallback = true,
+                async = false,
+                timeout_ms = 1000,
+            })
+        end
     end,
 }
