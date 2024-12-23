@@ -1,5 +1,6 @@
 return {
     "hrsh7th/nvim-cmp",
+    priority = 100,
     event = "InsertEnter",
     dependencies = {
         "neovim/nvim-lspconfig",
@@ -14,18 +15,24 @@ return {
     config = function()
         local cmp = require("cmp")
         local lspkind = require("lspkind")
+        lspkind.init({})
         cmp.setup({
             snippet = {
                 -- REQUIRED - you must specify a snippet engine
                 expand = function(args)
                     vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+                    -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+                    -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+                    -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
                     -- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
                 end,
             },
-            window = {},
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 { name = "vsnip" }, -- For vsnip users.
+                -- { name = 'luasnip' }, -- For luasnip users.
+                -- { name = 'ultisnips' }, -- For ultisnips users.
+                -- { name = 'snippy' }, -- For snippy users.
             }, {
                 { name = "buffer" },
             }),
@@ -35,16 +42,53 @@ return {
                 ["<C-Space>"] = cmp.mapping.complete(),
                 ["<C-e>"] = cmp.mapping.abort(),
                 ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+                ["<C-d>"] = cmp.mapping.open_docs(),
             }),
-            format = lspkind.cmp_format({
-                mode = "symbol",
-                maxWidth = {
-                    menu = 50,
-                    abbr = 50,
-                },
-                ellipsis_char = "...", -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-                show_labelDetails = true, -- show labelDetails in menu. Disabled by default
-            }),
+
+            formatting = {
+                fields = { "kind", "abbr", "menu" },
+                format = lspkind.cmp_format({
+                    mode = "symbol",
+                    max_width = 50,
+                    symbol_map = {
+                        Text = "󰉿",
+                        Method = "󰆧",
+                        Function = "󰊕",
+                        Constructor = "",
+                        Field = "󰜢",
+                        Variable = "󰀫",
+                        Class = "󰠱",
+                        Interface = "",
+                        Module = "",
+                        Property = "󰜢",
+                        Unit = "󰑭",
+                        Value = "󰎠",
+                        Enum = "",
+                        Keyword = "󰌋",
+                        Snippet = "",
+                        Color = "󰏘",
+                        File = "󰈙",
+                        Reference = "󰈇",
+                        Folder = "󰉋",
+                        EnumMember = "",
+                        Constant = "󰏿",
+                        Struct = "󰙅",
+                        Event = "",
+                        Operator = "󰆕",
+                        TypeParameter = "",
+                    },
+
+                    before = function(entry, vim_item)
+                        vim_item.menu = ({
+                            nvim_lsp = "[LSP]",
+                            buffer = "[Buffer]",
+                            path = "[Path]",
+                            vsnip = "[Vsnip]",
+                        })[entry.source.name]
+                        return vim_item
+                    end,
+                }),
+            },
         })
     end,
 }
