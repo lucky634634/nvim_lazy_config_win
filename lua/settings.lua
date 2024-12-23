@@ -36,3 +36,4 @@ o.ruler = true
 o.mouse = "a"
 
 o.shell = "pwsh.exe"
+o.scrolloff = 8
