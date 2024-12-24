@@ -45,3 +45,9 @@ end)
 
 -- Terminal
 keymap.set("t", "<esc>", "<C-\\><C-n>", { silent = true })
+
+function _G.OpenTerminal()
+    vim.api.nvim_command("botright split | resize 15 | term")
+end
+
+keymap.set("n", "<c-\\>", "<CMD>lua OpenTerminal()<CR>", { silent = true })
