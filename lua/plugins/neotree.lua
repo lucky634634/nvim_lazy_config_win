@@ -1,5 +1,6 @@
 return {
     "nvim-neo-tree/neo-tree.nvim",
+    priority = 1000,
     branch = "v3.x",
     dependencies = {
         "nvim-lua/plenary.nvim",
@@ -18,12 +19,12 @@ return {
                 hide_dotfiles = false,
                 hide_gitignored = false,
                 hide_by_name = {
-                    '.git',
+                    ".git",
                     -- '.DS_Store',
                     -- 'thumbs.db',
                 },
                 never_show = {
-                    '.git'
+                    ".git",
                 },
             },
         },
