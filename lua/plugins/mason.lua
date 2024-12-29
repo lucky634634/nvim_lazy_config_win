@@ -21,6 +21,7 @@ return {
                 "stylua", -- lua formatter
                 "lua_ls",
                 "rust_analyzer",
+                "pyright",
             },
         })
     end,
