@@ -25,3 +25,5 @@ require("lazy").setup({
 })
 
 require("maps")
+vim.cmd([[let g:loaded_node_provider = 0]])
+vim.cmd([[let g:loaded_perl_provider = 0]])
