@@ -25,7 +25,7 @@ require("lazy").setup({
 })
 
 require("maps")
--- vim.cmd([[let g:loaded_node_provider = 0]])
-vim.cmd([[let g:node_host_prog = 'C:\\Program Files\\nodejs\\node.EXE']])
+vim.cmd([[let g:loaded_node_provider = 0]])
+-- vim.cmd([[let g:node_host_prog = 'C:\\Program Files\\nodejs\\node.EXE']])
 vim.cmd([[let g:loaded_perl_provider = 0]])
 vim.cmd([[let g:python3_host_prog = 'C:\\Program Files\\Python313\\python.EXE']])
