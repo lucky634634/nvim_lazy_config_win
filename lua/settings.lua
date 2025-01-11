@@ -35,7 +35,12 @@ o.termguicolors = true
 o.ruler = true
 o.mouse = "a"
 
-o.shell = "pwsh.exe"
 o.scrolloff = 8
 o.splitkeep = "screen"
 o.laststatus = 3
+
+o.shell = "pwsh.exe"
+o.shellxquote = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
+o.shellquote = ""
+o.shellpipe = "| Out-File -Encoding UTF8 %s"
+o.shellredir = "| Out-File -Encoding UTF8 %s"
