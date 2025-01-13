@@ -3,7 +3,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
-        { "folke/neodev.nvim", opts = {} },
+        -- { "folke/neodev.nvim", opts = {} },
     },
     config = function()
         local nvim_lsp = require("lspconfig")
