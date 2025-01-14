@@ -3,6 +3,12 @@ return {
     tag = "0.1.6",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-        require("telescope").setup()
+        require("telescope").setup({
+            pickers = {
+                colorscheme = {
+                    enable_preview = true,
+                },
+            },
+        })
     end,
 }
