@@ -40,6 +40,7 @@ o.splitkeep = "screen"
 o.laststatus = 3
 
 if vim.fn.has("macunix") then
+else
     o.shell = "pwsh.exe"
     o.shellxquote = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
     o.shellquote = ""
