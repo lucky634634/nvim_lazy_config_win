@@ -25,6 +25,7 @@ require("lazy").setup({
 })
 
 require("keymap")
+require("colorscheme")
 vim.cmd([[let g:loaded_node_provider = 0]])
 -- vim.cmd([[let g:node_host_prog = 'C:\\Program Files\\nodejs\\node.EXE']])
 vim.cmd([[let g:loaded_perl_provider = 0]])
