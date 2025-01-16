@@ -9,11 +9,10 @@ keymap.set("n", "<leader>r", "<CMD>Neotree focus<CR>", { desc = "Neotree focus" 
 keymap.set("n", "<leader>ff", "<CMD>Telescope find_files<CR>", { desc = "Fuzzy find files in cwd" })
 keymap.set("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", { desc = "Fuzzy find recent files" })
 keymap.set("n", "<leader>fb", "<CMD>Telescope buffers<CR>", { desc = "Find string in cwd" })
-keymap.set("n", "<leader>fs", "<CMD>Telescope git_status<CR>", { desc = "Find string under cursor in cwd" })
-keymap.set("n", "<leader>fc", "<CMD>Telescope git commits<CR>", { desc = "Find todos" })
 keymap.set("n", "<leader>fh", "<CMD>Telescope help_tags<CR>", { desc = "Find help" })
-keymap.set("n", "<leader>ft", "<CMD>Telescope colorscheme<CR>", { desc = "Colorscheme picker" })
+keymap.set("n", "<leader>fc", "<CMD>Telescope colorscheme<CR>", { desc = "Colorscheme picker" })
 
+-- Split
 keymap.set("n", "<leader>o", "<CMD>vsplit<CR>", { silent = true })
 keymap.set("n", "<leader>p", "<CMD>split<CR>", { silent = true })
 
