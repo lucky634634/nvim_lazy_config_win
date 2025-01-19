@@ -29,6 +29,8 @@ return {
                 "cpp",
                 "cmake",
                 "rust",
+                "regex",
+                "bash",
             },
             incremental_selection = {
                 enable = true,
