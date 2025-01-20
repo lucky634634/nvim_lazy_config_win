@@ -53,5 +53,5 @@ end, { noremap = true, silent = true })
 
 keymap.set("n", "<C-\\>", function()
     local snacks = require("snacks")
-    snacks.Terminal.open()
+    snacks.Terminal.toggle()
 end, { noremap = true, silent = true })
