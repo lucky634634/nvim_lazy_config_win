@@ -13,13 +13,4 @@ return {
         statuscolumn = { enabled = true },
         words = { enabled = true },
     },
-    keys = {
-        {
-            "<c-/>",
-            function()
-                Snacks.terminal()
-            end,
-            desc = "Toggle Terminal",
-        },
-    },
 }

@@ -50,3 +50,8 @@ keymap.set("t", "<esc>", "<C-\\><C-n>", { silent = true })
 keymap.set("n", "<leader>ca", function()
     require("tiny-code-action").code_action()
 end, { noremap = true, silent = true })
+
+keymap.set("n", "<C-\\>", function()
+    local snacks = require("snacks")
+    snacks.Terminal.open()
+end, { noremap = true, silent = true })
