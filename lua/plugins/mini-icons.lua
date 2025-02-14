@@ -1,6 +1,6 @@
 return {
     'echasnovski/mini.icons', 
-    version = '*',
+    version = false,
     config = function()
         require('mini.icons').setup()
     end,

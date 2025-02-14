@@ -32,3 +32,5 @@ keymap.set("n", "<leader>fg", "<CMD>Telescope live_grep<CR>", { desc = "Fuzzy fi
 keymap.set("n", "<leader>fb", "<CMD>Telescope buffers<CR>", { desc = "Find string in cwd" })
 keymap.set("n", "<leader>fh", "<CMD>Telescope help_tags<CR>", { desc = "Find help" })
 keymap.set("n", "<leader>fc", "<CMD>Telescope colorscheme<CR>", { desc = "Colorscheme picker" })
+
+keymap.set('i', '<C-Space>', ':lua MiniCompletion.complete_fallback()<CR>', { silent = true })

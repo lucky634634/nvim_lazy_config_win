@@ -3,7 +3,7 @@ return {
     dependencies = {
         'echasnovski/mini.icons'
     },
-    version = '*',
+    version = false,
     config = function()
         require('mini.files').setup()
     end,
