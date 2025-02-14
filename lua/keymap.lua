@@ -22,3 +22,6 @@ keymap.set("n", "<C-Down>", "<C-w>-", { silent = true })
 keymap.set("n", "<leader>t", "<CMD>tabnew<CR>", { silent = true })
 keymap.set("n", "H", "<CMD>tabprevious<CR>", { silent = true })
 keymap.set("n", "L", "<CMD>tabnext<CR>", { silent = true })
+
+-- Mini.Files
+keymap.set("n", "<leader>e", "<CMD>lua MiniFiles.open()<CR>", { silent = true })
