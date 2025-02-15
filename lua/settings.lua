@@ -39,11 +39,11 @@ o.scrolloff = 8
 o.splitkeep = "screen"
 o.laststatus = 3
 
-o.shell = "pwsh.exe"
-o.shellxquote = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
-o.shellquote = ""
-o.shellpipe = "| Out-File -Encoding UTF8 %s"
-o.shellredir = "| Out-File -Encoding UTF8 %s"
+-- o.shell = "pwsh.exe"
+-- o.shellxquote = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
+-- o.shellquote = ""
+-- o.shellpipe = "| Out-File -Encoding UTF8 %s"
+-- o.shellredir = "| Out-File -Encoding UTF8 %s"
 
 -- Set up pretty unicode diagnostic signs
 vim.fn.sign_define("DiagnosticSignError", {text = "", hl = "DiagnosticSignError", texthl = "DiagnosticSignError", culhl = "DiagnosticSignErrorLine"})

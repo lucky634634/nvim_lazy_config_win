@@ -44,6 +44,7 @@ return {
                 vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts("Implementation"))
                 vim.keymap.set({ 'n', 'v' }, 'gq', vim.lsp.buf.code_action, opts("Code Action"))
                 vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts("Buffer References"))
+                vim.keymap.set('n', 'gh', vim.lsp.buf.hover, opts("Hover"))
                 vim.keymap.set('n', '<leader>F', function()
                     vim.lsp.buf.format { async = true }
                 end, opts("Format Buffer"))
