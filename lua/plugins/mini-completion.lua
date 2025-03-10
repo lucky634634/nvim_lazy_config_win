@@ -1,5 +1,5 @@
-return { 
-    'echasnovski/mini.completion', 
+return {
+    'echasnovski/mini.completion',
     version = false,
     config = function()
         require('mini.completion').setup()
