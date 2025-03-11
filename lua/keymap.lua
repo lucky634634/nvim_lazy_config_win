@@ -34,3 +34,5 @@ keymap.set("n", "<leader>fh", "<CMD>Telescope help_tags<CR>", { desc = "Find hel
 keymap.set("n", "<leader>fc", "<CMD>Telescope colorscheme<CR>", { desc = "Colorscheme picker" })
 
 keymap.set('i', '<C-Space>', ':lua MiniCompletion.complete_fallback()<CR>', { silent = true })
+
+keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { silent = true })
