@@ -1,9 +1,8 @@
 return {
     "Exafunction/codeium.vim",
+    dependencies = {
+        "nvim-lua/plenary.nvim"
+    },
     event = "BufEnter",
-    version = "1.20.0",
-    config = function()
-        vim.g.codeium_disable_bindings = false
-        vim.g.codeium_enabled = true
-    end,
+    -- version = "1.20.0",
 }
