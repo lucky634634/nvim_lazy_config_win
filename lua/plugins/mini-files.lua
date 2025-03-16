@@ -4,7 +4,8 @@ return {
         'echasnovski/mini.icons'
     },
     version = false,
-    config = function()
-        require('mini.files').setup()
-    end,
+    -- config = function()
+    --     require('mini.files').setup()
+    -- end,
+    opts = {}
 }
