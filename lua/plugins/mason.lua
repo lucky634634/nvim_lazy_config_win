@@ -77,6 +77,7 @@ return {
                     },
                 },
             },
+            filetypes = { "lua" },
         }
     end,
 }
