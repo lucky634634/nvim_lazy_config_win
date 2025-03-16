@@ -24,6 +24,7 @@ return {
                 "prettier",
                 "stylua", -- lua formatter
                 "lua_ls",
+                "pyright",
             },
         })
 
@@ -79,5 +80,17 @@ return {
             },
             filetypes = { "lua" },
         }
+
+        lsp.pyright.setup({
+            settings = {
+                python = {
+                    analysis = {
+                        autoSearchPaths = true,
+                        useLibraryCodeForTypes = true,
+                    },
+                },
+            },
+            filetypes = { "py" },
+        })
     end,
 }
