@@ -14,16 +14,15 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "prettier",
-                "stylua", -- lua formatter
-                "lua_ls",
+                "stylua",
                 "pyright",
                 "marksman"
             }
         })
 
-        mason_lspconfig.setup()
+        mason_lspconfig.setup({})
 
-        mason_tool.setup()
+        mason_tool.setup({})
 
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
