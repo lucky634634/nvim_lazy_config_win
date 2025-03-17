@@ -10,24 +10,20 @@ return {
         local mason_lspconfig = require("mason-lspconfig")
         local mason_tool = require("mason-tool-installer")
         local lsp = require("lspconfig")
-        mason.setup()
-
-        mason_lspconfig.setup({
-            automatic_installation = true,
+        mason.setup({
             ensure_installed = {
                 "lua_ls",
-            },
-        })
-
-        mason_tool.setup({
-            ensure_installed = {
                 "prettier",
                 "stylua", -- lua formatter
                 "lua_ls",
                 "pyright",
                 "marksman"
-            },
+            }
         })
+
+        mason_lspconfig.setup()
+
+        mason_tool.setup()
 
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -41,16 +37,16 @@ return {
                     return { buffer = ev.buf, desc = str }
                 end
 
-                vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts("Declaration"))
-                vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts("Definition"))
-                vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts("Implementation"))
-                vim.keymap.set({ 'n', 'v' }, 'gq', vim.lsp.buf.code_action, opts("Code Action"))
-                vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts("Buffer References"))
-                vim.keymap.set('n', 'gh', vim.lsp.buf.hover, opts("Hover"))
-                vim.keymap.set('n', '<leader>F', function()
+                vim.keymap.set('n', '<leader>lgD', vim.lsp.buf.declaration, opts("Declaration"))
+                vim.keymap.set('n', '<leader>lgd', vim.lsp.buf.definition, opts("Definition"))
+                vim.keymap.set('n', '<leader>lgi', vim.lsp.buf.implementation, opts("Implementation"))
+                vim.keymap.set({ 'n', 'v' }, '<leader>lca', vim.lsp.buf.code_action, opts("Code Action"))
+                vim.keymap.set('n', '<leader>lgr', vim.lsp.buf.references, opts("Buffer References"))
+                vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, opts("Hover"))
+                vim.keymap.set('n', '<leader>lf', function()
                     vim.lsp.buf.format { async = true }
                 end, opts("Format Buffer"))
-                vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts("Rename"))
+                vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, opts("Rename"))
             end,
         })
 
