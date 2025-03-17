@@ -36,3 +36,5 @@ keymap.set("n", "<leader>fc", "<CMD>Telescope colorscheme<CR>", { desc = "Colors
 keymap.set('i', '<C-Space>', ':lua MiniCompletion.complete_fallback()<CR>', { silent = true })
 
 keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { silent = true })
+
+keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })

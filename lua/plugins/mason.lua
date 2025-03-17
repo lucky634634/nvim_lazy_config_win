@@ -25,6 +25,7 @@ return {
                 "stylua", -- lua formatter
                 "lua_ls",
                 "pyright",
+                "marksman"
             },
         })
 
@@ -49,6 +50,7 @@ return {
                 vim.keymap.set('n', '<leader>F', function()
                     vim.lsp.buf.format { async = true }
                 end, opts("Format Buffer"))
+                vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts("Rename"))
             end,
         })
 
@@ -78,7 +80,7 @@ return {
                     },
                 },
             },
-            filetypes = { "lua" },
+            filetypes = { "*.lua" },
         }
 
         lsp.pyright.setup({
@@ -90,7 +92,7 @@ return {
                     },
                 },
             },
-            filetypes = { "py" },
+            filetypes = { "*.py" },
         })
     end,
 }

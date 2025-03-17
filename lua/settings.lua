@@ -6,7 +6,9 @@ global.maplocalleader = " "
 
 o.number = true
 o.relativenumber = true
-o.clipboard:append("unnamedplus")
+vim.schedule(function()
+    o.clipboard:append("unnamedplus")
+end)
 o.syntax = "on"
 o.autoindent = true
 o.cursorline = true
@@ -34,19 +36,31 @@ o.splitbelow = true
 o.termguicolors = true
 o.ruler = true
 o.mouse = "a"
+o.hlsearch = true
+o.undofile = true
+o.smartcase = true
+o.ignorecase = true
+o.updatetime = 250
+o.timeoutlen = 300
+o.splitright = true
+o.splitbelow = true
+o.list = true
+o.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+o.inccommand = 'split'
+o.cursorline = true
 
-o.scrolloff = 8
+o.confirm = true
+
+o.scrolloff = 10
 o.splitkeep = "screen"
 o.laststatus = 3
 
--- o.shell = "pwsh.exe"
--- o.shellxquote = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
--- o.shellquote = ""
--- o.shellpipe = "| Out-File -Encoding UTF8 %s"
--- o.shellredir = "| Out-File -Encoding UTF8 %s"
-
 -- Set up pretty unicode diagnostic signs
-vim.fn.sign_define("DiagnosticSignError", {text = "", hl = "DiagnosticSignError", texthl = "DiagnosticSignError", culhl = "DiagnosticSignErrorLine"})
-vim.fn.sign_define("DiagnosticSignWarn", {text = "", hl = "DiagnosticSignWarn", texthl = "DiagnosticSignWarn", culhl = "DiagnosticSignWarnLine"})
-vim.fn.sign_define("DiagnosticSignInfo", {text = "", hl = "DiagnosticSignInfo", texthl = "DiagnosticSignInfo", culhl = "DiagnosticSignInfoLine"})
-vim.fn.sign_define("DiagnosticSignHint", {text = "", hl = "DiagnosticSignHint", texthl = "DiagnosticSignHint", culhl = "DiagnosticSignHintLine"})
+vim.fn.sign_define("DiagnosticSignError",
+    { text = "", hl = "DiagnosticSignError", texthl = "DiagnosticSignError", culhl = "DiagnosticSignErrorLine" })
+vim.fn.sign_define("DiagnosticSignWarn",
+    { text = "", hl = "DiagnosticSignWarn", texthl = "DiagnosticSignWarn", culhl = "DiagnosticSignWarnLine" })
+vim.fn.sign_define("DiagnosticSignInfo",
+    { text = "", hl = "DiagnosticSignInfo", texthl = "DiagnosticSignInfo", culhl = "DiagnosticSignInfoLine" })
+vim.fn.sign_define("DiagnosticSignHint",
+    { text = "", hl = "DiagnosticSignHint", texthl = "DiagnosticSignHint", culhl = "DiagnosticSignHintLine" })
