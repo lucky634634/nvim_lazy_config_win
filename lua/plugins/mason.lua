@@ -80,7 +80,6 @@ return {
                     },
                 },
             },
-            filetypes = { "*.lua" },
         }
 
         lsp.pyright.setup({
@@ -92,7 +91,6 @@ return {
                     },
                 },
             },
-            filetypes = { "*.py" },
         })
     end,
 }
