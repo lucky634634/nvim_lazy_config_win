@@ -46,6 +46,7 @@ return {
                     vim.lsp.buf.format { async = true }
                 end, opts("Format Buffer"))
                 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename, opts("Rename"))
+                vim.keymap.set('n', '<leader>la', vim.diagnostic.open_float, opts("Open Diagnostics"))
             end,
         })
 
