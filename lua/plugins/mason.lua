@@ -2,13 +2,11 @@ return {
     "williamboman/mason.nvim",
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
-        "WhoIsSethDaniel/mason-tool-installer.nvim",
         "neovim/nvim-lspconfig",
     },
     config = function()
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
-        local mason_tool = require("mason-tool-installer")
         local lsp = require("lspconfig")
         mason.setup({
             ensure_installed = {
@@ -21,8 +19,6 @@ return {
         })
 
         mason_lspconfig.setup({})
-
-        mason_tool.setup({})
 
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
