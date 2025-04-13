@@ -21,7 +21,7 @@ require("lazy").setup({
     -- colorscheme that will be used when installing plugins.
     -- install = { colorscheme = { "catppuccin-mocha" } },
     -- automatically check for plugin updates
-    checker = { enabled = false },
+    checker = { enabled = true },
 })
 
 require("keymap")
