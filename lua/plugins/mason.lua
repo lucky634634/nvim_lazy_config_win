@@ -55,6 +55,8 @@ return {
         --         })
         --     end
         -- })
+        --
+        -- lsp.setup({capabilities = capabilities, settings = {}})
 
         lsp.lua_ls.setup {
             settings = {
