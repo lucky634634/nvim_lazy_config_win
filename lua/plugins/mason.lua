@@ -18,7 +18,7 @@ return {
             }
         })
 
-        mason_lspconfig.setup({})
+        mason_lspconfig.setup()
 
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -46,15 +46,15 @@ return {
         })
 
 
-        local capabilities = vim.lsp.protocol.make_client_capabilities()
+        -- local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-        mason_lspconfig.setup_handlers({
-            function(server)
-                lsp[server].setup({
-                    capabilities = capabilities
-                })
-            end
-        })
+        -- mason_lspconfig.setup_handlers({
+        --     function(server)
+        --         lsp[server].setup({
+        --             capabilities = capabilities
+        --         })
+        --     end
+        -- })
 
         lsp.lua_ls.setup {
             settings = {
