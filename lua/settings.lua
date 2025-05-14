@@ -54,6 +54,7 @@ o.confirm = true
 o.scrolloff = 10
 o.splitkeep = "screen"
 o.laststatus = 3
+o.scrolljump = 3
 
 -- Set up pretty unicode diagnostic signs
 -- vim.fn.sign_define("DiagnosticSignError",
