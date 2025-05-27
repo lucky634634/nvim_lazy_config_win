@@ -45,19 +45,6 @@ return {
             end,
         })
 
-
-        -- local capabilities = vim.lsp.protocol.make_client_capabilities()
-
-        -- mason_lspconfig.setup_handlers({
-        --     function(server)
-        --         lsp[server].setup({
-        --             capabilities = capabilities
-        --         })
-        --     end
-        -- })
-        --
-        -- lsp.setup({capabilities = capabilities, settings = {}})
-
         lsp.lua_ls.setup {
             settings = {
                 Lua = {
