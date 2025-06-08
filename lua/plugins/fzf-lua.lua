@@ -10,7 +10,4 @@ return {
         { "<leader>fc", "<cmd>FzfLua colorschemes<cr>", desc = "ColorSchemes (fzf-lua)" },
         { "<leader>fk", "<cmd>FzfLua keymaps<cr>",      desc = "keymaps (fzf-lua)" },
     },
-    config = function()
-        require("fzf-lua").setup({})
-    end
 }
