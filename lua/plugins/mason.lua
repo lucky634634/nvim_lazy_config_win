@@ -35,12 +35,9 @@ return {
                 vim.keymap.set('n', '<leader>lgD', vim.lsp.buf.declaration, opts("Declaration"))
                 vim.keymap.set('n', '<leader>lgd', vim.lsp.buf.definition, opts("Definition"))
                 vim.keymap.set('n', '<leader>lgi', vim.lsp.buf.implementation, opts("Implementation"))
-                vim.keymap.set({ 'n', 'v' }, '<leader>lca', vim.lsp.buf.code_action, opts("Code Action"))
+                vim.keymap.set({ 'n', 'v' }, 'gq', vim.lsp.buf.code_action, opts("Code Action"))
                 vim.keymap.set('n', '<leader>lgr', vim.lsp.buf.references, opts("Buffer References"))
-                vim.keymap.set('n', '<leader>lh', vim.lsp.buf.hover, opts("Hover"))
-                vim.keymap.set('n', '<leader>lf', function()
-                    vim.lsp.buf.format { async = true }
-                end, opts("Format Buffer"))
+                vim.keymap.set('n', 'gh', vim.lsp.buf.hover, opts("Hover"))
                 vim.keymap.set('n', '<leader>la', vim.diagnostic.open_float, opts("Open Diagnostics"))
             end,
         })
