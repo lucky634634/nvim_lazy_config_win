@@ -14,6 +14,9 @@ return {
                 timeout_ms = 500,
                 lsp_format = "fallback",
             },
+            formatters_by_filetype = {
+                lua = { "stylua" },
+            },
         })
     end
 }
