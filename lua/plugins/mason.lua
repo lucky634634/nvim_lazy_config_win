@@ -8,12 +8,18 @@ return {
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
         local lsp = require("lspconfig")
-        mason.setup()
+        mason.setup(
+            {
+                ensure_installed = {
+                    "lua_ls",
+                    "stylua",
+                }
+            }
+        )
 
         mason_lspconfig.setup({
             ensure_installed = {
                 "lua_ls",
-                "stylua",
             }
         })
 
