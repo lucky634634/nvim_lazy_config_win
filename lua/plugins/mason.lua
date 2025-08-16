@@ -8,17 +8,14 @@ return {
         local mason = require("mason")
         local mason_lspconfig = require("mason-lspconfig")
         local lsp = require("lspconfig")
-        mason.setup({
+        mason.setup()
+
+        mason_lspconfig.setup({
             ensure_installed = {
                 "lua_ls",
-                "prettier",
                 "stylua",
-                "pyright",
-                "marksman"
             }
         })
-
-        mason_lspconfig.setup()
 
         vim.api.nvim_create_autocmd('LspAttach', {
             group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -53,7 +50,11 @@ return {
                         library = {
                             [vim.fn.expand('$VIMRUNTIME/lua')] = true,
                             [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true,
+                            [vim.fn.expand('~/AppData/Local/nvim/lua')] = true,
                         },
+                    },
+                    telemetry = {
+                        enable = false,
                     },
                 },
             },
