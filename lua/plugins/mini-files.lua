@@ -1,7 +1,7 @@
 return {
-    'echasnovski/mini.files',
+    'nvim-mini/mini.files',
     dependencies = {
-        'echasnovski/mini.icons'
+        'nvim-mini/mini.icons'
     },
     version = false,
     -- config = function()
