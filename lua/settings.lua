@@ -51,7 +51,7 @@ o.cursorline = true
 
 o.confirm = true
 
-o.scrolloff = 10
+o.scrolloff = 15
 o.splitkeep = "screen"
 o.laststatus = 3
 o.scrolljump = 3
@@ -65,10 +65,10 @@ o.scrolljump = 3
 --     { text = "", hl = "DiagnosticSignInfo", texthl = "DiagnosticSignInfo", culhl = "DiagnosticSignInfoLine" })
 -- vim.fn.sign_define("DiagnosticSignHint",
 --     { text = "", hl = "DiagnosticSignHint", texthl = "DiagnosticSignHint", culhl = "DiagnosticSignHintLine" })
-vim.diagnostic.config ({
+vim.diagnostic.config({
     signs = {
         text = {
-            [vim.diagnostic.severity.ERROR] = '',
+            [vim.diagnostic.severity.ERROR] = '',
             [vim.diagnostic.severity.WARN] = '',
             [vim.diagnostic.severity.INFO] = '',
             [vim.diagnostic.severity.HINT] = '',
