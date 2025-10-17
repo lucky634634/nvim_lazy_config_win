@@ -17,10 +17,22 @@ return {
         },
     },
     opts = {
-        formatters_by_filetype = {
+        formatters_by_ft = {
+            cpp = { "clang_format" },
         },
         default_format_opts = {
             lsp_format = "fallback",
+        },
+        format_on_save = {
+            -- These options will be passed to conform.format()
+            timeout_ms = 500,
+            lsp_format = "fallback",
+        },
+        formatters = {
+            clang_format = {
+                command = "clang-format",
+                append_args = { '-style=file:C:/Users/KHOA/.clang-format' },
+            },
         },
     },
     init = function()

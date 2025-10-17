@@ -1,7 +1,7 @@
 vim.lsp.enable({
     "lua_ls",
     "rust_analyzer",
-    "stylua"
+    "clangd"
 })
 
 vim.diagnostic.config({
