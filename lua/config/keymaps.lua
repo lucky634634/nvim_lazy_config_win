@@ -12,6 +12,9 @@ keymap.set("n", "<C-l>", "<C-w>l", { silent = true })
 keymap.set("n", "<C-j>", "<C-w>j", { silent = true })
 keymap.set("n", "<C-k>", "<C-w>k", { silent = true })
 
+keymap.set("n", "L", ":bnext<CR>", { silent = true })
+keymap.set("n", "H", ":bprevious<CR>", { silent = true })
+
 -- Resize window
 keymap.set("n", "<C-Left>", "<C-w><", { silent = true })
 keymap.set("n", "<C-Right>", "<C-w>>", { silent = true })

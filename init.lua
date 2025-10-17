@@ -1,4 +1,5 @@
 require("config.options")
+require("core.mason-path")
 require("core.lazy")
 require("core.lsp")
 require("config.keymaps")
