@@ -1,4 +1,4 @@
----@diagnostic disable: need-check-nil, undefined-field
+---@diagnostic disable: need-check-nil, undefined-field, missing-parameter, param-type-mismatch
 vim.lsp.enable({
     "lua_ls",
     "rust_analyzer",
