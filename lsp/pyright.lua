@@ -1,3 +1,4 @@
 return {
-    filetypes = { "python" },
+    filetypes = { "py" },
+    cmd = { "pyright-langserver", "--stdio" },
 }
