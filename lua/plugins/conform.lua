@@ -19,6 +19,7 @@ return {
     opts = {
         formatters_by_ft = {
             cpp = { "clang_format" },
+            py = { "black" },
         },
         default_format_opts = {
             lsp_format = "fallback",

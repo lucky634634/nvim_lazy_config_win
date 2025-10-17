@@ -10,7 +10,9 @@ return {
             "lua-language-server",
             "rust_analyzer",
             "clangd",
-            "clang-format"
+            "pyright",
+            "clang-format",
+            "black",
         }
     },
 }
