@@ -55,35 +55,3 @@ o.scrolloff = 15
 o.splitkeep = "screen"
 o.laststatus = 3
 o.scrolljump = 3
-
--- Set up pretty unicode diagnostic signs
--- vim.fn.sign_define("DiagnosticSignError",
---     { text = "", hl = "DiagnosticSignError", texthl = "DiagnosticSignError", culhl = "DiagnosticSignErrorLine" })
--- vim.fn.sign_define("DiagnosticSignWarn",
---     { text = "", hl = "DiagnosticSignWarn", texthl = "DiagnosticSignWarn", culhl = "DiagnosticSignWarnLine" })
--- vim.fn.sign_define("DiagnosticSignInfo",
---     { text = "", hl = "DiagnosticSignInfo", texthl = "DiagnosticSignInfo", culhl = "DiagnosticSignInfoLine" })
--- vim.fn.sign_define("DiagnosticSignHint",
---     { text = "", hl = "DiagnosticSignHint", texthl = "DiagnosticSignHint", culhl = "DiagnosticSignHintLine" })
-vim.diagnostic.config({
-    signs = {
-        text = {
-            [vim.diagnostic.severity.ERROR] = '',
-            [vim.diagnostic.severity.WARN] = '',
-            [vim.diagnostic.severity.INFO] = '',
-            [vim.diagnostic.severity.HINT] = '',
-        },
-        texthl = {
-            [vim.diagnostic.severity.ERROR] = 'DiagnosticSignError',
-            [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarn',
-            [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfo',
-            [vim.diagnostic.severity.HINT] = 'DiagnosticSignHint',
-        },
-        culhl = {
-            [vim.diagnostic.severity.ERROR] = 'DiagnosticSignErrorLine',
-            [vim.diagnostic.severity.WARN] = 'DiagnosticSignWarnLine',
-            [vim.diagnostic.severity.INFO] = 'DiagnosticSignInfoLine',
-            [vim.diagnostic.severity.HINT] = 'DiagnosticSignHintLine',
-        }
-    }
-})

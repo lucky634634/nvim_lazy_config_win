@@ -9,6 +9,8 @@ return {
         ensure_installed = {
             "lua-language-server",
             "rust_analyzer",
+            "clangd",
+            "clang-format"
         }
     },
 }
