@@ -4,8 +4,8 @@ vim.lsp.enable({
     "rust_analyzer",
     "clangd",
     "pyright",
-    "cmake-language-server",
-    "cspell-lsp"
+    "cspell-lsp",
+    "neocmakelsp"
 })
 
 vim.diagnostic.config({

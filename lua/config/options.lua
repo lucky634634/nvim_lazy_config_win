@@ -55,3 +55,4 @@ o.scrolloff = 15
 o.splitkeep = "screen"
 o.laststatus = 3
 o.scrolljump = 3
+o.swapfile = false
