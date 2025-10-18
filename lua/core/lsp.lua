@@ -3,7 +3,9 @@ vim.lsp.enable({
     "lua_ls",
     "rust_analyzer",
     "clangd",
-    "pyright"
+    "pyright",
+    "cmake-language-server",
+    "cspell-lsp"
 })
 
 vim.diagnostic.config({
