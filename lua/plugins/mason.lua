@@ -7,10 +7,14 @@ return {
     build = ":MasonUpdate",
     opts = {
         ensure_installed = {
+            -- lsp
             "lua-language-server",
             "rust_analyzer",
             "clangd",
             "pyright",
+            "cspell-lsp",
+            "neocmakelsp",
+            -- formatter
             "clang-format",
             "black",
         }
