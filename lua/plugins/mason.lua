@@ -14,6 +14,7 @@ return {
             "pyright",
             "cspell-lsp",
             "neocmakelsp",
+            "omnisharp",
             -- formatter
             "clang-format",
             "black",

@@ -5,7 +5,8 @@ vim.lsp.enable({
     "clangd",
     "pyright",
     "cspell-lsp",
-    "neocmakelsp"
+    "neocmakelsp",
+    "omnisharp"
 })
 
 vim.diagnostic.config({
