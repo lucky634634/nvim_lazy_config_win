@@ -17,6 +17,7 @@ return {
             -- formatter
             "clang-format",
             "black",
+            "csharpier"
         }
     },
 }
