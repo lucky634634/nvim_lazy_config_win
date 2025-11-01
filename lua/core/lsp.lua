@@ -45,6 +45,16 @@ vim.lsp.config('*', {
     root_markers = { '.git' },
 })
 
+vim.api.nvim_create_autocmd('LspAttach', {
+    callback = function(args)
+        local opts = { buffer = args.buf }
+
+        vim.keymap.set('n', 'gq', '<CMD>lua vim.lsp.buf.code_action()<CR>', opts)
+        vim.keymap.set('n', 'gh', '<CMD>lua vim.lsp.buf.hover()<CR>', opts)
+        vim.keymap.set('n', 'gd', '<CMD>lua vim.lsp.buf.definition()<CR>', opts)
+    end
+})
+
 local function restart_lsp(bufnr)
     bufnr = bufnr or vim.api.nvim_get_current_buf()
     local clients = vim.lsp.get_clients({ bufnr = bufnr })

@@ -24,8 +24,4 @@ keymap.set("n", "<C-Down>", "<C-w>-", { silent = true })
 -- Mini.Files
 keymap.set("n", "<leader>e", "<CMD>lua MiniFiles.open()<CR>", { silent = true })
 
-keymap.set('i', '<C-Space>', ':lua MiniCompletion.complete_fallback()<CR>', { silent = true })
-
-keymap.set('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { silent = true })
-
 keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
