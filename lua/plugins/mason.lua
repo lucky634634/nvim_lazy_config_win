@@ -14,6 +14,8 @@ return {
             "pyright",
             "cspell-lsp",
             "neocmakelsp",
+            "zls",
+            "omnisharp",
             -- formatter
             "clang-format",
             "black",

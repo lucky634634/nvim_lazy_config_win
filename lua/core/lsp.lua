@@ -6,7 +6,8 @@ vim.lsp.enable({
     "pyright",
     "cspell-lsp",
     "neocmakelsp",
-    "omnisharp"
+    "omnisharp",
+    "zls"
 })
 
 vim.diagnostic.config({
