@@ -5,6 +5,6 @@ return {
     opts = {
         scroll = {
             enabled = true,
-        }
+        },
     }
 }
