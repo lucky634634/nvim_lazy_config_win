@@ -15,7 +15,6 @@ return {
             "cspell-lsp",
             "neocmakelsp",
             "zls",
-            "omnisharp",
             "csharp-language-server",
             -- formatter
             "clang-format",
