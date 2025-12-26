@@ -7,7 +7,8 @@ vim.lsp.enable({
     "cspell-lsp",
     "neocmakelsp",
     "zls",
-    "csharp-language-server"
+    "csharp-language-server",
+    "sqlls"
 })
 
 vim.diagnostic.config({

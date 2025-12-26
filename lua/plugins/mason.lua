@@ -16,6 +16,7 @@ return {
             "neocmakelsp",
             "zls",
             "csharp-language-server",
+            "sqlls",
             -- formatter
             "clang-format",
             "black",
