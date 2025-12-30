@@ -6,7 +6,6 @@ vim.lsp.enable({
     "pyright",
     "cspell-lsp",
     "neocmakelsp",
-    "zls",
     "csharp-language-server",
     "sqlls"
 })
