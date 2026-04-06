@@ -6,7 +6,9 @@ global.maplocalleader = " "
 
 o.number = true
 o.relativenumber = true
-o.clipboard:append("unnamedplus")
+vim.schedule(function()
+    o.clipboard:append("unnamedplus")
+end)
 o.syntax = "on"
 o.autoindent = true
 o.cursorline = true
@@ -31,16 +33,27 @@ o.showmatch = true
 o.inccommand = "split"
 o.splitright = true
 o.splitbelow = true
-o.termguicolors = true
+o.termguicolors = false
 o.ruler = true
 o.mouse = "a"
+o.hlsearch = true
+o.undofile = true
+o.smartcase = true
+o.ignorecase = true
+o.updatetime = 250
+o.timeoutlen = 300
+o.splitright = true
+o.splitbelow = true
+o.list = true
+o.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+o.inccommand = 'split'
+o.cursorline = true
 
-o.scrolloff = 8
+o.confirm = true
+
+o.scrolloff = 15
 o.splitkeep = "screen"
 o.laststatus = 3
-
-o.shell = "pwsh.exe"
-o.shellxquote = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command "
-o.shellquote = ""
-o.shellpipe = "| Out-File -Encoding UTF8 %s"
-o.shellredir = "| Out-File -Encoding UTF8 %s"
+o.scrolljump = 3
+o.swapfile = false
+o.winborder = 'rounded'
