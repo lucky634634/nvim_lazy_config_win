@@ -21,7 +21,4 @@ keymap.set("n", "<C-Right>", "<C-w>>", { silent = true })
 keymap.set("n", "<C-Up>", "<C-w>+", { silent = true })
 keymap.set("n", "<C-Down>", "<C-w>-", { silent = true })
 
--- Mini.Files
--- keymap.set("n", "<leader>e", "<CMD>lua MiniFiles.open()<CR>", { silent = true })
-
--- keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
+keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { silent = true })
