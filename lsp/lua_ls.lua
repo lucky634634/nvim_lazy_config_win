@@ -1,6 +1,7 @@
 return {
     cmd = { "lua-language-server" },
     filetypes = { "lua" },
+    root_dir = vim.fs.dirname(vim.fs.find({ '.git', '.vim', 'nvim' }, { upward = true })[1]),
     root_markers = {
         '.luarc.json',
         '.luarc.jsonc',
@@ -27,6 +28,18 @@ return {
                 paramName = "Disable",
                 semicolon = "Disable",
                 arrayIndex = "Disable",
+            },
+            workspace = {
+                library = {
+                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+                    [vim.fn.stdpath("config")] = true,
+                },
+                maxPreload = 2000,
+                preloadFileSize = 50000,
+            },
+            telemetry = {
+                enable = false,
             },
         },
     },
